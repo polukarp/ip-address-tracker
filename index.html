@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body id="root">
+    <header>
+      <h1>IP Address Tracker</h1>
+      <input
+        type="text"
+        placeholder="Search for any IP address or domain IP Address Location Timezone UTC"
+      />
+    </header>
+    <main id="map">
+      <div class="info">
+        <div class="info__element info__ip">
+          <h3 class="tag">IP ADDRESS</h3>
+          <p class="info__value">192.212.174.101</p>
+        </div>
+        <div class="info__element info__location">
+          <h3 class="tag">LOCATION</h3>
+          <p class="info__value">Brooklyn, NY, 10001</p>
+        </div>
+        <div class="info__element info__timezone">
+          <h3 class="tag">TIMEZONE</h3>
+          <p class="info__value">UTC-05:00</p>
+        </div>
+        <div class="info__element info__isp">
+          <h3 class="tag">ISP</h3>
+          <p class="info__value">SpaceX Starlink</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- add offset value dynamically using the API -->
+  </body>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer
+  ></script>
+</html>
